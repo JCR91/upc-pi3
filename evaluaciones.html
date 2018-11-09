@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+<meta name="description" content="El cole contigo es una iniciativa para acercar la educaci&oacute;n a los docentes, padres y madres de familia y estudiantes. Aqu&iacute; podr&aacute;s encontrar diferentes recursos y materiales educativos que les permitan continuar con lo que ser&aacute; su a&ntilde;o escolar durante el periodo de suspensi&oacute;n de clases." />
+<meta name="author" content="" />
+<meta name="theme-color" content="#F0DB4F">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
+<link rel="shortcut icon" type="image/png" href="./img/ProgramadorFitness.png">
+<link rel="apple-touch-icon" href="./ProgramadorFitness.png">
+<link rel="apple-touch-startup-image" href="./ProgramadorFitness.png">
+<link rel="manifest" href="./manifest.json">
+
+<script src="./js/jquery.min.js"></script> 
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script> 
+<script src="./js/holder.min.js"></script> 
+<script src="./js/jquery.redirect.js" type="text/javascript"></script> 
+<script src="./js/recursos.js?v=2" type="text/javascript"></script> 
+<script src="./js/jquery.session.js"></script> 
+<script src="script.js"></script>
+
+<title> el cole contigo - Per&uacute;Educa </title>
+
+<link rel="icon" href="./images/favicon.ico" type="image/x-icon" /> 
+<link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="./css/estilos.css?v=v6" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="./"><h3 class="masthead-brand"><img src="./images/logo-perueduca.png"></h3></a>
+                    </div>
+                    <div class="col-xs-8 text-right hidden-xs">              
+                        <h3 class="masthead-logo">
+                            <img src="./images/logo-gobierno.png">
+                            <img class="hidden-sm" src="./images/logo-minedu.png">
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+              
+<div class="row" style="background: red; display: none;" id="divOffline"> Se perdió la conexión </div>
+        </header>
+
+        <section class="menu-principal">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                    </div>
+                                
+                </div>
+            </div>
+        </section>     
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-sm-12 col-xs-12">
+                    <nav>
+                        <h3 class="cover-heading" id="lblNombreProfesor"></h3>
+                    </nav>
+                </div>
+                <div class="col-md-5 col-sm-12 col-xs-12" id="divRegresar">
+                <nav aria-label="...">
+                        <ul class="pager">
+                            <li class="next"><a href="./" > ← Regresar</a></li>
+                        </ul>
+                    </nav></div>                           
+            </div>
+        </div>    
+       <br>
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12" >
+
+                            <div class="panel panel-default">
+                                    <div class="panel-body pEvaluacion">
+                                    <div id="divListadoEvaluaciones">
+                                        <h2>Listado de Evaluaciones</h2>
+                                        <br>
+                                        <div class="row">
+                                                <div class="form-group col-md-6" >
+                                                        <label for="cboregion" class="col-sm-3 control-label">Grado</label>
+                                                        <div class="col-md-9" >
+                                                            <select class="form-control classGrado" id="cbogrado" name="cbogrado" style="width:100%">
+                                                                <option value="">Seleccione</option>                                                                                                       
+                                                                                                </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-md-6" id="divRegion">
+                                                            <label for="cboregion" class="col-sm-3 control-label">Curso</label>
+                                                            <div class="col-md-9" >
+                                                                <select class="form-control" id="cbocurso" name="cbocurso" style="width:100%">
+                                                                    <option value="">Seleccione</option>                                   
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                        </div>
+                                        <div class="row">                                               
+                                                    <div class="form-group col-md-6" id="divRegion">
+                                                            <label for="cboregion" class="col-sm-3 control-label">Estado</label>
+                                                            <div class="col-md-9" >
+                                                                <select class="form-control" id="cboestado" name="cboestado" style="width:100%">
+                                                                    <option value="">Todos</option>
+                                                                    <option value="1">Finalizado</option>                                      
+                                                                    <option value="0">Pendiente</option>                                      
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                        </div>
+                                                <br>
+                                                
+                                        <table id="tblSolicitud" name="tblSolicitud" class="table table-bordered table-hover">
+                                                <thead>
+                                                <tr>
+                                                  <th>Nombre de Examen</th>
+                                                  <th>Fecha de Creación</th>
+                                                  <th>Estado</th>
+                                                  <th>Opciones</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody id="bodyEvaluacion">                                                    
+                                                </tbody>  
+                                        </table>
+                                              <div class="row">
+                                                    <div class="" >
+                                                            <button type="button" class="btn btn-success" id="btnRegistrar">Registrar Nueva Evaluación</button>
+                                                    </div>
+                                               </div>
+                                    </div>
+                                    <div id="divRegistroEvaluaciones" style="display: none;">
+                                            <h2>Registro de Evaluación</h2>
+                                            <br>
+
+                                            <div class="row">
+                                                    <div class="form-group col-md-12" id="divRegion">
+                                                            <label for="cboregion" class="col-md-1 control-label">Nombre</label>
+                                                            <div class="col-md-11" >
+                                                                <input class="form-control" id="txtNombreEvaluacion" nombre="txtNombreEvaluacion"  maxlength="90"/>
+                                                            </div>
+                                                        </div>      
+                                            </div>
+
+                                            <div class="row">
+                                                    <div class="form-group col-md-6" id="divRegion">
+                                                            <label for="cboregion" class="col-sm-2 control-label">Grado</label>
+                                                            <div class="col-md-10" >
+                                                                <select class="form-control classGrado" id="cbogradoRegistro" name="cbogradoRegistro" style="width:100%">
+                                                                    <option value="">Seleccione</option>                                                                                                           
+                                                                                                    </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-md-6" id="divRegion">
+                                                                <label for="cboregion" class="col-md-2 control-label">Curso</label>
+                                                                <div class="col-md-10" >
+                                                                    <select class="form-control" id="cboCursoRegistro" name="cboCursoRegistro" style="width:100%">
+                                                                        <option value="">Seleccione</option>
+                                                                               
+                                                                                                        </select>
+                                                                </div>
+                                                            </div>
+                                            </div>
+
+                                            <div class="row">
+                                                    <div class="form-group col-md-12" >
+                                                            <button type="button" class="btn btn-primary" id="btnBuscar">Buscar</button>
+                                                    </div>
+                                               </div>
+
+                                            <div class="form-group col-md-12">
+                                                <div class="panel panel-primary"> 
+                                                    <div class="panel-heading" style="text-align: left"> 
+                                                        <h3 class="panel-title">Banco de Preguntas</h3> 
+                                                    </div> 
+                                                    <div class="panel-body"> 
+                                                        <div id="bancoPreguntas">
+                                                        </div>
+
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                    <div class="" >
+                                                            <button type="button" class="btn btn-success" id="btnGuardar">Registrar</button>
+                                                            <button type="button" class="btn btn-info" id="btnRegresar">Regresar</button>
+                                                    </div>
+                                               </div>
+                                    </div>
+                                    </div>
+                            </div>
+                    </div>
+                </div>
+        </div>
+    
+     
+    
+        <!-- Modal -->
+        <div class="modal fade bs-example-modal-lg" id="ModalVerPreguntas" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="padding-right: 200px !important;";>
+          <div class="modal-dialog modal-lg" role="document">
+          
+            <!-- Modal content-->
+            <div class="modal-content" style="width: 800px;">
+
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="tituloVer" style="text-align: center;" ></h4>
+              </div>
+              <div class="modal-body">
+                <div id="divModalVer" ></div>
+              </div>
+             
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="ModalIniciarPregunta" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="padding-right: 200px !important;";>
+                <div class="modal-dialog" role="document">
+                
+                  <!-- Modal content-->
+                  <div class="modal-content" >
+      
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title" style="text-align: center;" > Iniciar Examen</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div id="divModalIniciar" >
+                            <div class="row">
+                                    <div class="form-group col-md-12" >
+                                            <p>Nota: El examen se iniciará luego de registrar el tiempo de duración.</p>
+                                    </div>
+                                </div>
+                                <div class="row"></div>
+                                        <div class="form-group col-md-12" id="divRegion">
+                                                <label for="cboregion" class="col-sm-3 control-label">Minutos de Duración</label>
+                                                <div class="col-md-9" >
+                                                    <select class="form-control" id="cboduracion" name="cboduracion" style="width:100%">
+                                                        <option value="">Seleccione</option>     
+                                                        <option value="20">20</option>   
+                                                        <option value="40">40</option>   
+                                                        <option value="60">60</option>
+                                                        <option value="90">90</option>                                  
+                                                    </select>
+                                                </div>
+                                            </div>
+                            </div>
+                            <div class="row">
+                                    <div class="form-group col-md-12" >
+                                            <button type="button" class="btn btn-success" id="btnDuracion" atributo="">Registrar Duración</button>
+                                        </div>
+                                    </div>
+
+                      </div>
+                    </div>
+                   
+                  </div>
+                  
+                </div>
+              </div>
+
+        <footer class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                <p class="text-muted"><a href="" target="_blank">MINEDU</a> 2017 © Todos los derechos reservados, by <a href="" target="_blank">PerúEduca</a>.</p>
+              </div>
+              <div class="col-md-6 text-right"> 
+                <p>SIGUE A PERÚEDUCA EN:&nbsp;&nbsp;
+                <p>ALÓ PERÚEDUCA: 0800-40210</p>                       
+              </div>
+            </div>
+          </div>
+        </footer>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+
+
+    $(document).ready(function () {
+        
+        listarExamenes('','','')
+        var grados = $.getJSON("json/grado.json", function (data) {
+            $(".classGrado").html("");
+                $(".classGrado").append('<option value="">Seleccione</option>')
+            $.each(data.grado, function(index, elemento) {               
+                $(".classGrado").append('<option value="'+elemento.id+'">'+elemento.nombre+'</option>')
+            });
+        });
+
+      /*  $(function() {
+            var nombre = $.session.get('nombreProfesor')
+            //alert(nombre);
+            if(nombre != undefined){
+                $("#lblNombreProfesor").text("¡Bienvenido Profesor! : "+ nombre);
+            }else{
+                window.location.href = "./profesor.html";
+            }
+        });*/
+        
+    });
+
+    $(document).on('click', '#btnDuracion' , function() {
+        var idPreg = $(this).attr("atributo")
+        var cboduracion = $("#cboduracion").val()
+        console.log('idPreg->'+idPreg)
+        if(cboduracion == ""){
+                    alert("Debe ingresar la cantidad de minutos de duración");
+                    return false;
+                }
+
+        $.ajax({          
+            url:   'acciones/actualizarEvaluacion.php',
+            data: {id: idPreg , accion: "iniciar", duracion : cboduracion},
+            dataType: 'json',
+            type:  'get',
+            success:  function (data) {
+                
+                alert("Se ha iniciado la evaluación, la cúal terminará en : " + cboduracion +" minutos")
+                listarExamenes('','','');
+                $("#ModalIniciarPregunta").modal('hide')
+                
+                Notification.requestPermission(status => {
+                console.log(status)
+                let n = new Notification('Nueva Evaluación', {
+                    body: 'Se ha dado inicio a una nueva evaluación."',
+                    icon: './images/icon_192.png'
+                })
+                })
+
+                }        
+            })
+        });
+    
+    
+    $(document).on('click', '#btnEliminar' , function() {
+        var id = $(this).attr("atributo")
+
+        if(!confirm("¿Está seguro que desea eliminar la evaluación?")){
+            return false;
+        }
+
+         $.ajax({          
+            url:   'acciones/actualizarEvaluacion.php',
+            data: {id: id , accion: "eliminar", duracion : '0'},
+            dataType: 'json',
+            type:  'get',
+            success:  function (data) {
+                alert("Se ha eliminado la evaluación seleccionada")
+                listarExamenes('','','');
+                
+           
+                }        
+            })
+
+        
+    });
+
+    $(document).on('click', '#btnFinalizar' , function() {
+        var id = $(this).attr("atributo")
+
+        if(!confirm("¿Está seguro que desea finalizar la evaluación?")){
+            return false;
+        }
+
+         $.ajax({          
+            url:   'acciones/actualizarEvaluacion.php',
+            data: {id: id , accion: "finalizar", duracion : '0'},
+            dataType: 'json',
+            type:  'get',
+            success:  function (data) {
+                alert("Se ha finalizado la evaluación seleccionada")
+                listarExamenes('','','');
+                
+                Notification.requestPermission(status => {
+                console.log(status)
+                let n = new Notification('Termino la Evaluación', {
+                    body: 'Se ha terminado el tiempo de la evaluación."',
+                    icon: './images/icon_192.png'
+                })
+                })
+           
+                }        
+            })
+
+        
+    });
+
+    
+    $(document).on('click', '#btnIniciar' , function() {
+        var id = $(this).attr("atributo")
+        $('#btnDuracion').attr('atributo', id);
+        $("#ModalIniciarPregunta").modal('show')
+        
+    });
+    $(document).on('click', '#btnVer' , function() {
+        var id = $(this).attr("atributo")
+        var strDiv = "";
+        $("#divModalVer").html('')
+        var cadena = $.getJSON("json/evaluaciones/evaluacion.json", function (data) {
+            $.each(data.evaluacion, function(index, elemento) { 
+                if(elemento.id == id){
+                    $("#tituloVer").text(elemento.nombre);
+                        var numPregunta = 0;
+                        $.each(elemento.preguntas , function(i, val) { 
+                            console.log('i ->' + val)
+                            var idPregunta = val.idPregunta_1
+                            console.log('idPregunta ->' + val.idPregunta_1)
+
+                            var cadenaPregunta = $.getJSON("json/evaluaciones/preguntas.json", function (dataP) {
+                                $.each(dataP.preguntas, function(indice, valor) { 
+                                    if(valor.grado == elemento.grado ){
+                                        $.each(valor.cursos, function(indice2, valor2) { 
+                                                if(valor2.curso == elemento.curso ){
+                                                    $.each(valor2.temas, function(indice3, valor3) { 
+                                                        $.each(valor3.cuestionarios, function(indice4, valor4) {
+                                                            
+                                                            $.each(valor4.preguntas, function(indice5, valor5) {
+                                                                console.log('valor5.id ->' + valor5.id +"-"+val )
+                                                                if(valor5.id == val ){
+                                                                    
+
+                                                                    strDiv += '<div class="col-lg-6">'; 
+                                                                    strDiv += '<div class="input-group">'; 
+                                                                    strDiv += '<span class="input-group-addon">'; 
+                                                                    strDiv += '</span>'; 
+                                                                    strDiv += '<input type="text" class="form-control cssTool" value="'+valor5.nombre+'" readonly  data-toggle="tooltip" data-placement="top" title="'+valor5.nombre+'">'; 
+                                                                    strDiv += '</div>'; 
+                                                                    strDiv += '</div>';
+                                                                }
+
+                                                            });
+                                                        })
+                                                    });
+                                                }
+                                        });
+                                    }
+
+                                });
+
+                               // console.log("strDiv: " +strDiv)
+                                $("#divModalVer").html('<div class="row"><div class="col-lg-12"><h5>Las preguntas seleccionadas son:</h5> </div></div> <br> <div class="row">' + strDiv + '</div>')
+                                $("#ModalVerPreguntas").modal('show')
+
+                            });
+                         //   strDiv += ' <div class="row">';
+                           /*  */
+
+                        });
+                }
+            });
+            
+        });
+       
+
+        
+        //alert(id)
+    });
+
+    $(document).on('change', '#cbogradoRegistro' , function() {
+
+        var grado = $(this).val();
+        var cadena = $.getJSON("json/materia.json", function (data) {
+            $("#cboCursoRegistro").html('')
+            $("#cboCursoRegistro").append('<option value="">Seleccione</option>')
+
+            $.each(data.materia, function(index, elemento) {              
+                if(elemento.grado == grado){
+                    
+                    $.each(elemento.curso, function(key, val) {
+                        $("#cboCursoRegistro").append('<option value="'+val.id+'">'+val.nombre+'</option>')
+                      
+                    });
+                }                
+            });
+            });
+
+    });
+
+    $(document).on('change', '#cbogrado' , function() {
+
+var grado = $(this).val();
+var cadena = $.getJSON("json/materia.json", function (data) {
+    $("#cbocurso").html('')
+    $("#cbocurso").append('<option value="">Seleccione</option>')
+
+    $.each(data.materia, function(index, elemento) {              
+        if(elemento.grado == grado){
+            
+            $.each(elemento.curso, function(key, val) {
+                $("#cbocurso").append('<option value="'+val.id+'">'+val.nombre+'</option>')
+              
+            });
+        }                
+    });
+    });
+
+});
+
+    $(document).on('click', '.chkPregunta' , function() {
+        var puntoXpregunta = $(this).attr("atributo")
+        var puntajeActual = $("#lblPuntaje").attr("atributo");
+        
+        
+        if( $(this).is(':checked') ){
+            var puntajeNuevo = parseInt(puntajeActual) + parseInt(puntoXpregunta)
+            if(parseInt(puntajeNuevo) <= 20){                
+                $("#strPuntos").text('')
+                $("#lblPuntaje").attr('atributo', puntajeNuevo)
+                $("#strPuntos").text(puntajeNuevo);
+                
+            }else{
+                alert("El puntaje máximo es 20")
+                $(this).prop('checked', false)
+            }
+        }else{
+            var puntajeNuevo = parseInt(puntajeActual) - parseInt(puntoXpregunta)
+            $("#lblPuntaje").attr('atributo', puntajeNuevo)
+            $("#strPuntos").text(puntajeNuevo);
+        }
+    });
+    $(document).on('click', '#btnRegistrar' , function() {
+       // alert(requestFromBGSync)
+        //$("#divListadoEvaluaciones").hide()
+        
+        $("#divRegresar").hide()
+        $("#divListadoEvaluaciones").hide(1000, function() {            
+            $("#divRegistroEvaluaciones").show(1000, function() {
+            })
+        });
+
+    });
+    $(document).on('click', '#btnRegresar' , function() {
+        $("#divRegresar").show()
+        $("#divRegistroEvaluaciones").hide(1000, function() {            
+            $("#divListadoEvaluaciones").show(1000, function() {
+            })
+        });
+
+    
+    });
+
+    $(document).on('click', '#btnBuscar' , function() {
+
+        var grado = $("#cbogradoRegistro").val()
+        var curso = $("#cboCursoRegistro").val()
+
+        $("#bancoPreguntas").html('')
+        var strDiv = ""
+
+        var cadena = $.getJSON("json/evaluaciones/preguntas.json", function (data) {
+
+            $.each(data.preguntas, function(index, elemento) {
+                if(elemento.grado == grado ){
+                    $.each(elemento.cursos, function(key, value) {
+                        if(value.curso == curso ){
+                            strDiv += ' <div class="form-group col-md-6" style="text-align:left;"> ';
+                            strDiv += ' <h5>Seleccione las preguntas:</h5>';
+                            strDiv += ' </div>';
+                            strDiv += ' <div class="form-group col-md-6" style="text-align:right;">';
+                            strDiv += ' <h5 id="lblPuntaje" atributo = "0">Total de Puntos: <strong id="strPuntos" >0</strong><strong></strong> - 20</strong></h5>';
+                            strDiv += ' </div>';
+                            
+                            $.each(value.temas, function(i, valor) {
+                              //  alert("valor" + valor.nombre)
+                                strDiv += '<div class="form-group col-md-12">';                                                             
+                                strDiv += '<div class="list-group-item">'; 
+                                strDiv += '<div class="row" > '; 
+                                strDiv += '<div class="form-group col-md-12" >'; 
+                                strDiv += '<h6>Tema: '+valor.nombre+'</h6>'; 
+                                strDiv += '</div>';                                                                     
+                                strDiv += '</div>'; 
+
+                                    $.each(valor.cuestionarios, function(pos, resultado) {
+                                        strDiv += '<div class="row" > '; 
+                                        strDiv += '<div class="form-group col-md-6" style="text-align:left;">'; 
+                                        strDiv += '<h6>Puntos por Pregunta: '+resultado.puntaje+'</h6>'; 
+                                        strDiv += '</div>'; 
+                                        strDiv += '</div>'; 
+                                        strDiv += ' <div class="row">'; 
+                                        $.each(resultado.preguntas, function(p, campo) {
+                                                strDiv += '<div class="col-lg-6">'; 
+                                                strDiv += '<div class="input-group">'; 
+                                                strDiv += '<span class="input-group-addon">'; 
+                                                strDiv += '<input type="checkbox" name="preguntaEvaluacion" class="chkPregunta" value="'+campo.id+'" atributo="'+resultado.puntaje+'" >'; 
+                                                strDiv += '</span>'; 
+                                                strDiv += '<input type="text" class="form-control cssTool" value="'+campo.nombre+'" readonly  data-toggle="tooltip" data-placement="top" title="'+campo.nombre+'">'; 
+                                                strDiv += '</div>'; 
+                                                strDiv += '</div>'; 
+                                        });
+                                        strDiv += '</div>'; 
+                                    });                       
+                                strDiv += '</div>'; 
+                                strDiv += '</div>'; 
+                            });
+
+                            
+                        }else{
+                            strDiv += "<p>No se encontraron preguntas para el curso solicitado."
+                        }
+                    });
+                }else{
+                    strDiv += "<p>No se encontraron preguntas para el curso solicitado."
+                }
+            });
+            
+            $("#bancoPreguntas").html(strDiv)
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+    });
+ 
+    $(document).on('click', '#btnGuardar' , function() {
+
+        var nombre = $("#txtNombreEvaluacion").val();
+        var grado = $("#cbogradoRegistro").val();
+        var curso = $("#cboCursoRegistro").val();
+        var preguntas = []
+        var puntajeActual = $("#lblPuntaje").attr("atributo");
+        $("input[name='preguntaEvaluacion']:checked").each(function ()
+        {
+            preguntas.push(parseInt($(this).val()));
+        });
+
+        if(nombre == "" || grado == "" || curso == ""){
+            alert("Debe ingresar todos los campos del registro de evaluación")
+            return false;
+        }
+        
+        if(parseInt(puntajeActual) != 20 ){
+            alert("La suma de los puntos de las preguntas debe de ser 20")
+            return false;
+        }
+
+
+        if(!confirm("¿Esta seguro que desea grabar un nuevo examen?")){
+            return false;
+        }
+        
+        
+
+        
+        //alert(preguntas);
+        $.ajax({          
+            url:   'acciones/evaluacion.php',
+            data: {nombre: nombre , grado: grado, curso: curso,preguntas: preguntas},
+            dataType: 'json',
+            type:  'get',
+            success:  function (data) {
+                         
+                alert("Examen guardado satisfactoriamente.");
+                listarExamenes('','','');
+                $("#bancoPreguntas").html('')     
+                var grado =  $("#cbogradoRegistro").val();
+                var curso =  $("#cboCursoRegistro").val();                                                     
+                $("#cbogradoRegistro").val('') 
+                $("#cboCursoRegistro").val('')  
+                $("#txtNombreEvaluacion").val('')  
+            //    $("#cbogrado").val(grado) 
+            //    $("#cbocurso").val(curso) 
+
+                
+                $("#divRegistroEvaluaciones").hide(1000, function() {            
+                $("#divListadoEvaluaciones").show(1000, function() {
+                })
+
+                
+                });        
+            },
+            error: function (data) { 
+                var arrPreguntas = "";
+                var urlCache = "";
+                var nombreCache = "";
+                var url = ""
+                var grado =  $("#cbogradoRegistro").val();
+                var curso =  $("#cboCursoRegistro").val();  
+
+                $.each( preguntas, function( i, val ) {
+                    arrPreguntas += "&preguntas[]="+val
+                   
+                });
+
+                if(localStorage.getItem('url') != null){
+                    urlCache = ','+ localStorage.getItem('url');
+                    nombreCache = ','+ localStorage.getItem('nombre');
+                }
+
+                 url  += "https://elcolecontigo.pe/acciones/evaluacion.php?nombre="+nombre+"&grado="+grado+"&curso="+curso+arrPreguntas
+                
+                localStorage.setItem('url', url + urlCache)
+                localStorage.setItem('nombre', nombre + nombreCache)
+
+                 alert("Examen guardado satisfactoriamente.");
+                listarExamenes('','','');
+                $("#bancoPreguntas").html('')     
+                                                                   
+                $("#cbogradoRegistro").val('') 
+                $("#cboCursoRegistro").val('')  
+                $("#txtNombreEvaluacion").val('')  
+                //$("#cbogrado").val(grado) 
+                //$("#cbocurso").val(curso) 
+
+                
+                $("#divRegistroEvaluaciones").hide(1000, function() {            
+                $("#divListadoEvaluaciones").show(1000, function() {
+                })
+
+                
+                }); 
+            }
+        });
+    });
+
+    function listarExamenes(grado,curso,estado){
+        console.log('listarExamenes->0')
+       try{
+        console.log('listarExamenes->1')
+        var cadena = $.getJSON("json/evaluaciones/evaluacion.json", function (data) {
+            console.log('listarExamenes->2')
+            $("#bodyEvaluacion").html('')
+            $.each(data.evaluacion, function(key, elemento) {
+                console.log('listarExamenes->3')
+                if( grado != "" && curso != ""){
+                    console.log(1)
+                    if(elemento.grado == grado &&  elemento.curso == curso){
+                      
+                        if(elemento.estado == 0){
+                            $("#bodyEvaluacion").append("<tr><td>"+elemento.nombre+"</td> <td>"+elemento.creacion+"</td> <td>Pendiente</td> <td><a style='color:#337ab7;cursor: pointer;' id='btnEliminar' atributo='"+elemento.id+"'>Eliminar</a>&nbsp/&nbsp<a style='color:#337ab7;cursor: pointer;' id='btnIniciar' atributo='"+elemento.id+"'>Iniciar</a>&nbsp/&nbsp<a style='color:#337ab7;cursor: pointer;' id='btnVer' atributo='"+elemento.id+"'>Ver Preguntas</a></td> </tr>")
+                    
+                        }else if(elemento.estado == 1){
+                            $("#bodyEvaluacion").append("<tr><td>"+elemento.nombre+"</td> <td>"+elemento.creacion+"</td> <td>En Proceso</td> <td><a style='color:#337ab7;cursor: pointer;' id='btnFinalizar' atributo='"+elemento.id+"'>Finalizar</a>&nbsp/&nbsp<a style='color:#337ab7;cursor: pointer;' id='btnVer' atributo='"+elemento.id+"'>Ver Preguntas</a></td> </tr>")
+                    
+                        }else{
+                            $("#bodyEvaluacion").append("<tr><td>"+elemento.nombre+"</td> <td>"+elemento.creacion+"</td> <td>Finalizado</td> <td><a style='color:#337ab7;cursor: pointer;' id='btnResultados' atributo='"+elemento.id+"'>Ver Resultados</a></td> </tr>")
+                        }
+                        
+                    }else{
+                        if(elemento.estado == 0){
+                            $("#bodyEvaluacion").append("<tr><td>"+elemento.nombre+"</td> <td>"+elemento.creacion+"</td> <td>Pendiente</td> <td><a style='color:#337ab7;cursor: pointer;' id='btnEliminar' atributo='"+elemento.id+"'>Eliminar</a>&nbsp/&nbsp<a style='color:#337ab7;cursor: pointer;' id='btnIniciar' atributo='"+elemento.id+"'>Iniciar</a>&nbsp/&nbsp<a style='color:#337ab7;cursor: pointer;' id='btnVer' atributo='"+elemento.id+"'>Ver Preguntas</a></td> </tr>")
+                    
+                        }else if(elemento.estado == 1){
+                            $("#bodyEvaluacion").append("<tr><td>"+elemento.nombre+"</td> <td>"+elemento.creacion+"</td> <td>En Proceso</td> <td><a style='color:#337ab7;cursor: pointer;' id='btnFinalizar' atributo='"+elemento.id+"'>Finalizar</a>&nbsp/&nbsp<a style='color:#337ab7;cursor: pointer;' id='btnVer' atributo='"+elemento.id+"'>Ver Preguntas</a></td> </tr>")
+                    
+                        }else{
+                            $("#bodyEvaluacion").append("<tr><td>"+elemento.nombre+"</td> <td>"+elemento.creacion+"</td> <td>Finalizado</td> <td><a style='color:#337ab7;cursor: pointer;' id='btnResultados' atributo='"+elemento.id+"'>Ver Resultados</a></td> </tr>")
+                        }
+                    }
+                 
+                  }else{
+                    if(elemento.estado == 0){
+                            $("#bodyEvaluacion").append("<tr><td>"+elemento.nombre+"</td> <td>"+elemento.creacion+"</td> <td>Pendiente</td> <td><a style='color:#337ab7;cursor: pointer;' id='btnEliminar' atributo='"+elemento.id+"'>Eliminar</a>&nbsp/&nbsp<a style='color:#337ab7;cursor: pointer;' id='btnIniciar' atributo='"+elemento.id+"'>Iniciar</a>&nbsp/&nbsp<a style='color:#337ab7;cursor: pointer;' id='btnVer' atributo='"+elemento.id+"'>Ver Preguntas</a></td> </tr>")
+                    
+                        }else if(elemento.estado == 1){
+                            $("#bodyEvaluacion").append("<tr><td>"+elemento.nombre+"</td> <td>"+elemento.creacion+"</td> <td>En Proceso</td> <td><a style='color:#337ab7;cursor: pointer;' id='btnFinalizar' atributo='"+elemento.id+"'>Finalizar</a>&nbsp/&nbsp<a style='color:#337ab7;cursor: pointer;' id='btnVer' atributo='"+elemento.id+"'>Ver Preguntas</a></td> </tr>")
+                    
+                        }else{
+                            $("#bodyEvaluacion").append("<tr><td>"+elemento.nombre+"</td> <td>"+elemento.creacion+"</td> <td>Finalizado</td> <td><a style='color:#337ab7;cursor: pointer;' id='btnResultados' atributo='"+elemento.id+"'>Ver Resultados</a></td> </tr>")
+                        }
+                     }
+                  
+                  
+            });
+
+            if(localStorage.getItem('url') != null){
+                console.log('listarExamenes->7')
+                var numbersString = localStorage.getItem('nombre');
+                var numbersArray = numbersString.split(',');
+
+                $.each( numbersArray, function( i, val ) {
+                    console.log('listarExamenes->8')
+                    $("#bodyEvaluacion").append("<tr><td>"+val+"</td> <td>10/11/2018</td> <td>Pendiente</td> <td><a style='color:#337ab7;'>pendiente</a></td> </tr>")
+                });
+                }
+        }).error(function() {
+            console.log('listarExamenes-> errooooooooooooo')
+  });
+
+    } catch(err) {  //We can also throw from try block and catch it here
+        console.log('listarExamenes->9')
+        if(localStorage.getItem('url') != null){
+            var numbersString = localStorage.getItem('nombre');
+                var numbersArray = numbersString.split(',');
+                console.log('listarExamenes->10')
+                $.each( numbersArray, function( i, val ) {
+                    $("#bodyEvaluacion").append("<tr><td>"+val+"</td> <td>10/11/2018</td> <td>Pendiente</td> <td><a style='color:#337ab7;'>pendiente</a></td> </tr>")
+                });
+            }
+    }
+    }
+
+    function updateEvaluacionNetwork(){
+        
+      var numbersString = localStorage.getItem('url');
+      var numbersArray = numbersString.split(',');
+      
+      $.each( numbersArray, function( i, val ) {
+       // alert(val)
+        $.get(val, function(data, status){
+            listarExamenes('','','');
+            });
+        });
+
+        localStorage.removeItem('url')
+        localStorage.removeItem('nombre')
+        
+    }
+        
+ </script>
+
+
+</body>
+
+</html>

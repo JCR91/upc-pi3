@@ -1,0 +1,25 @@
+{
+    "materia":[{
+        "grado":"1",
+        "curso":[{
+                "id":"1",
+                "nombre":"Matemática",
+                "imagen":"matematica"},
+            {   "id":"2",
+                "nombre":"Comunicación",
+                "imagen":"comunicacion"}
+        ]} ,
+        {
+            "grado":"2",
+            "curso":[
+                {   "id":"3",
+                    "nombre":"Ciencia y Ambiente",
+                    "imagen":"ciencia-ambiente"},
+                {
+                    "id":"4",
+                    "nombre":"Personal Social",
+                    "imagen":"personal-social"}
+            ]}          
+    ]
+}
+

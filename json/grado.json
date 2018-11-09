@@ -1,0 +1,14 @@
+{
+    "grado":[
+            {
+            "id":"1",
+            "nombre":"Primero",
+            "codigo":"1.º"
+            },
+            {
+            "id":"2",
+            "nombre":"Segundo",
+            "codigo":"2.º"
+            }
+    ]
+}

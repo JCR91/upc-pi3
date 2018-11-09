@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+<meta name="description" content="El cole contigo es una iniciativa para acercar la educaci&oacute;n a los docentes, padres y madres de familia y estudiantes. Aqu&iacute; podr&aacute;s encontrar diferentes recursos y materiales educativos que les permitan continuar con lo que ser&aacute; su a&ntilde;o escolar durante el periodo de suspensi&oacute;n de clases." />
+<meta name="author" content="" />
+<meta name="theme-color" content="#F0DB4F">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
+<link rel="shortcut icon" type="image/png" href="./img/ProgramadorFitness.png">
+<link rel="apple-touch-icon" href="./ProgramadorFitness.png">
+<link rel="apple-touch-startup-image" href="./ProgramadorFitness.png">
+<link rel="manifest" href="./manifest.json">
+
+<script src="./js/jquery.min.js"></script> 
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script> 
+<script src="./js/holder.min.js"></script> 
+<script src="./js/jquery.redirect.js" type="text/javascript"></script> 
+<script src="./js/recursos.js?v=2" type="text/javascript"></script> 
+<script src="./js/jquery.session.js"></script> 
+<script src="script.js"></script>
+<script src="./js/Chart.min.js"></script>
+<script src="./js/utils.js"></script>
+<title> el cole contigo - Per&uacute;Educa </title>
+
+<link rel="icon" href="./images/favicon.ico" type="image/x-icon" /> 
+<link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="./css/estilos.css?v=v6" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="./"><h3 class="masthead-brand"><img src="./images/logo-perueduca.png"></h3></a>
+                    </div>
+                    <div class="col-xs-8 text-right hidden-xs">              
+                        <h3 class="masthead-logo">
+                            <img src="./images/logo-gobierno.png">
+                            <img class="hidden-sm" src="./images/logo-minedu.png">
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="menu-principal">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                    </div>
+                                
+                </div>
+            </div>
+        </section>     
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-sm-12 col-xs-12">
+                    <nav>
+                        <h3 class="cover-heading" id="lblNombreProfesor"></h3>
+                    </nav>
+                </div>
+                <div class="col-md-5 col-sm-12 col-xs-12">
+                <nav aria-label="...">
+                        <ul class="pager">
+                            <li class="next"><a href="./seguimiento.html"> ← Regresar</a></li>
+                        </ul>
+                    </nav></div>                           
+            </div>
+        </div>  
+        <br><br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12" >
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Alumnos</a></li>
+            <li><a data-toggle="tab" href="#menu1">Prueba PISA</a></li>
+            <li><a data-toggle="tab" href="#menu2">Prueba ECE</a></li>
+          </ul>
+        
+          <div class="tab-content" >
+            <div id="home" class="tab-pane fade in active" >
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <br>
+                            <form class="form-inline" id="formEntrar" name="formEntrar" autocomplete="off">
+                                <div class="row">
+                                    <div class="form-group col-md-6" id="divRegion">
+                                            <label for="cboregion" class="col-sm-3 control-label">Grado</label>
+                                            <div class="col-md-9" >
+                                                <select class="form-control" id="cbogrado" name="cbogrado" style="width:100%">
+                                                    <option value="">Seleccione</option>
+                                                                                            <option value="1">Primero</option>
+                                                                                            <option value="2">Segundo</option>
+                                                                                           
+                                                                                    </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6" id="divRegion">
+                                                <label for="cboregion" class="col-sm-3 control-label">Curso</label>
+                                                <div class="col-md-9" >
+                                                    <select class="form-control" id="cbocurso" name="cbocurso" style="width:100%">
+                                                        <option value="">Seleccione</option>
+                                                                                               
+                                                                                               
+                                                                                        </select>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                            <div class="form-group col-md-6" id="divRegion">
+                                                    <label for="cboregion" class="col-sm-3 control-label">Alumnos</label>
+                                                    <div class="col-md-9" >
+                                                        <select class="form-control" id="cboalumno" name="cboalumno" style="width:100%">
+                                                            <option value="">Seleccione</option>
+                                                                                                                                                                                               
+                                                                                            </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6" id="divRegion">
+                                                        <label for="cboregion" class="col-sm-3 control-label">Evaluacion</label>
+                                                        <div class="col-md-9" >
+                                                            <select class="form-control" id="cboexamen" name="cboexamen" style="width:100%">
+                                                                <option value="">Seleccione</option>
+                                                                                                </select>
+                                                        </div>
+                                                    </div>
+                                        </div>
+                                        <br>
+                                        <div>
+                                                <button type="button" class="btn btn-primary" id="btnBuscar">Buscar</button>
+                                        </div>
+                                    
+        
+                            </form>
+
+                        
+                    <div id="divCambas">
+                            <canvas id="myChart" ></canvas>
+                    </div>
+                    </div>
+                  </div>
+
+                
+            </div>
+            <div id="menu1" class="tab-pane fade">
+              <h3>Menu 1</h3>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+              <h3>Menu 2</h3>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <br><br>
+      
+
+
+
+        <footer class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                <p class="text-muted"><a href="" target="_blank">MINEDU</a> 2017 © Todos los derechos reservados, by <a href="" target="_blank">PerúEduca</a>.</p>
+              </div>
+              <div class="col-md-6 text-right"> 
+                <p>SIGUE A PERÚEDUCA EN:&nbsp;&nbsp;
+                <p>ALÓ PERÚEDUCA: 0800-40210</p>                       
+              </div>
+            </div>
+          </div>
+        </footer>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+
+
+    $(document).ready(function () {
+
+        $(document).on('change', '#cbogrado' , function() {
+            var grado = $(this).val();
+            $('#cbocurso').html('')
+            $('#cbocurso').append('<option value="" >Seleccione</option>');
+            if(grado == 1){
+                $('#cbocurso').append('<option value="1" >Matemática</option>');
+                $('#cbocurso').append('<option value="2" >Comunicación</option>');
+            }else{
+                $('#cbocurso').append('<option value="3" >Ciencia y Ambiente</option>');
+                $('#cbocurso').append('<option value="4" >Personal Social</option>');
+            }
+        });
+        $(document).on('change', '#cbocurso' , function() {
+            
+            var curso = $(this).val();
+            $('#cboalumno').html('')
+            $('#cboalumno').append('<option value="" >Todos</option>');
+            $('#cboalumno').append('<option value="1" >José Pérez</option>');
+            $('#cboalumno').append('<option value="2" >Ana Salcedo</option>');
+            $('#cboalumno').append('<option value="3" >María Flores</option>');
+            $('#cboalumno').append('<option value="4" >Javier Cardenas</option>');
+            $('#cboalumno').append('<option value="5" >Raul Jimenez</option>');
+            $('#cboalumno').append('<option value="6" >Sandra Padilla</option>');
+            
+            $('#cboexamen').html('')
+            $('#cboexamen').append('<option value="" >Seleccione</option>');
+            if(curso == 1){
+                $('#cboexamen').append('<option value="1" >Multiplicación - Tabla 7</option>'); 
+                $('#cboexamen').append('<option value="2" >Suma de Centenas</option>'); 
+                $('#cboexamen').append('<option value="3" >Divición de decimales</option>'); 
+            }else if(curso == 2){
+                $('#cboexamen').append('<option value="3" >Comprención lectora 1</option>'); 
+                $('#cboexamen').append('<option value="4" >Sujeto y Predicado</option>'); 
+            }else if(curso == 3){
+                $('#cboexamen').append('<option value="5" >Los climas del Perú</option>'); 
+                $('#cboexamen').append('<option value="6" >Las regiones</option>'); 
+            }else{
+                $('#cboexamen').append('<option value="7" >Francisco Bolognesi</option>'); 
+                $('#cboexamen').append('<option value="8" >Miguel Grau</option>'); 
+            }
+
+
+        })
+        $(function() {
+            var nombre = $.session.get('nombreProfesor')
+            //alert(nombre);
+            if(nombre != undefined){
+                $("#lblNombreProfesor").text("¡Bienvenido Profesor! : "+ nombre);
+            }else{
+                window.location.href = "./profesor.html";
+            }
+        });
+
+        $(document).on('click', '#btnBuscar' , function() {
+            $("#divCambas").html('')
+            $('#divCambas').append('<canvas id="myChart" ></canvas>'); 
+         var evaluacion =    $('#cboexamen option:selected').text()
+         var evaluacionCod =    $('#cboexamen').val()
+        let myChart = document.getElementById('myChart').getContext('2d');
+
+        if(evaluacionCod == 1){
+            var resultado1 = "5"; var resultado2 = "10"; var resultado3 = "5"
+            var resultado4 = "9"; var resultado5 = "15"; var resultado6 = "17"
+        }else if(evaluacionCod == 2){
+            var resultado1 = "11"; var resultado2 = "13"; var resultado3 = "11"
+            var resultado4 = "6"; var resultado5 = "14"; var resultado6 = "15"
+        }else if(evaluacionCod == 3){
+            var resultado1 = "9"; var resultado2 = "16"; var resultado3 = "9"
+            var resultado4 = "14"; var resultado5 = "11"; var resultado6 = "17"
+        }else if(evaluacionCod == 4){
+            var resultado1 = "14"; var resultado2 = "11"; var resultado3 = "18"
+            var resultado4 = "12"; var resultado5 = "9"; var resultado6 = "15"
+        }else if(evaluacionCod == 5){
+            var resultado1 = "11"; var resultado2 = "8"; var resultado3 = "7"
+            var resultado4 = "9"; var resultado5 = "14"; var resultado6 = "16"
+        }else if(evaluacionCod == 6){
+            var resultado1 = "18"; var resultado2 = "15"; var resultado3 = "17"
+            var resultado4 = "14"; var resultado5 = "15"; var resultado6 = "13"
+        }else if(evaluacionCod == 7){
+            var resultado1 = "10"; var resultado2 = "8"; var resultado3 = "13"
+            var resultado4 = "12"; var resultado5 = "11"; var resultado6 = "16"
+        }else {
+            var resultado1 = "7"; var resultado2 = "16"; var resultado3 = "15"
+            var resultado4 = "11"; var resultado5 = "9"; var resultado6 = "13"
+        }
+// Global Options
+Chart.defaults.global.defaultFontFamily = 'Lato';
+Chart.defaults.global.defaultFontSize = 18;
+Chart.defaults.global.defaultFontColor = '#777';
+
+let massPopChart = new Chart(myChart, {
+  type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+  data:{
+    labels:['José Pérez', 'Ana Salcedo', 'María Flores', 'Javier Cardenas', 'Raul Jimenez', 'Sandra Padilla'],
+    datasets:[{
+      label:'Nota',
+      data:[
+      resultado1,resultado2,resultado3,resultado4,resultado5,resultado6
+      ],
+      //backgroundColor:'green',
+      backgroundColor:[
+        'rgba(255, 99, 132, 0.6)',
+        'rgba(54, 162, 235, 0.6)',
+        'rgba(255, 206, 86, 0.6)',
+        'rgba(75, 192, 192, 0.6)',
+        'rgba(153, 102, 255, 0.6)',
+        'rgba(255, 159, 64, 0.6)',
+        'rgba(255, 99, 132, 0.6)'
+      ],
+      borderWidth:1,
+      borderColor:'#777',
+      hoverBorderWidth:3,
+      hoverBorderColor:'#000'
+    }]
+  },
+  options:{
+    title:{
+      display:true,
+      text:'Evaluación: ' + evaluacion,
+      fontSize:25
+    },
+    legend:{
+      display:true,
+      position:'right',
+      labels:{
+        fontColor:'#000'
+      }
+    },
+    layout:{
+      padding:{
+        left:50,
+        right:0,
+        bottom:0,
+        top:0
+      }
+    },
+    tooltips:{
+      enabled:true
+    },
+    scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+  }
+});});
+
+	
+
+    });
+ </script>
+
+
+</body>
+
+</html>

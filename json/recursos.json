@@ -1,0 +1,79 @@
+{
+    "recursos":[{
+                "grado":"1",
+                "cursos":[{
+                    "curso":"1",
+                    "material":[{
+                        "id":"1",
+                        "nombre":"Logico Mátematico",
+                        "imagen":"images/recursos/primaria/1/matematica/numeros.png",
+                        "url":"images/recursos/primaria/1/matematica/numeros.pdf",
+                        "tipo":"pdf"
+                    },
+                    {
+                        "id":"2",
+                        "nombre":"Loteria",
+                        "imagen":"images/recursos/primaria/1/matematica/matematica-unidad_0-02.jpg",
+                        "url":"images/recursos/primaria/1/matematica/loterias.pdf",
+                        "tipo":"pdf"
+                    }]
+                },
+                {
+                    "curso":"2",
+                    "material":[{
+                        "id":"3",
+                        "nombre":"Cuento el Zorro Enamorado",
+                        "imagen":"images/recursos/primaria/1/comunicacion/el-zorro.png",
+                        "url":"images/recursos/primaria/1/comunicacion/elzorroenamorado.pdf",
+                        "tipo":"pdf"
+                    },
+                    {
+                        "id":"4",
+                        "nombre":"Que pase el rey",
+                        "imagen":"images/recursos/primaria/1/comunicacion/quepaseelrey.jpg",
+                        "url":"images/recursos/primaria/1/comunicacion/quepaselerey.mp3",
+                        "tipo":"mp3"
+                    }]
+                }
+                ]
+                },
+                {
+                    "grado":"2",
+                    "cursos":[{
+                        "curso":"3",
+                        "material":[{
+                            "id":"5",
+                            "nombre":"Los Climas",
+                            "imagen":"images/recursos/primaria/2/ciencia-ambiente/climaperu.jpg",
+                            "url":"images/recursos/primaria/2/ciencia-ambiente/losclimas/index.html",
+                            "tipo":"html"
+                        },
+                        {
+                            "id":"6",
+                            "nombre":"Buena Postura",
+                            "imagen":"images/recursos/primaria/2/ciencia-ambiente/rm_buena_postura.jpg",
+                            "url":"images/recursos/primaria/2/ciencia-ambiente/rm_buena_postura.pdf",
+                            "tipo":"pdf"
+                        }]
+                    },
+                    {
+                        "curso":"4",
+                        "material":[{
+                            "id":"7",
+                            "nombre":"Francisco Bolognesi",
+                            "imagen":"images/recursos/primaria/2/personal-social/francisco_bolognesi.jpg",
+                            "url":"images/recursos/primaria/2/personal-social/francisco_bolognesi.pdf",
+                            "tipo":"pdf"
+                        },
+                        {
+                            "id":"8",
+                            "nombre":"Miguel Grau",
+                            "imagen":"images/recursos/primaria/2/personal-social/miguel_grau.jpg",
+                            "url":"images/recursos/primaria/2/personal-social/miguel_grau.pdf",
+                            "tipo":"pdf"
+                        }]
+                    }
+                    ]
+                }
+    ]
+}

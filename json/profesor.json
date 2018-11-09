@@ -1,0 +1,13 @@
+{
+    "profesor": [{
+        "nombre":"Jairo Criollo",
+        "dni":"47070826",
+        "clave":"47070826"
+    },
+    {
+        "nombre":"Jair Rojas",
+        "dni":"12345678",
+        "clave":"12345678"
+    }
+    ]   
+}

@@ -1,0 +1,1508 @@
+/*
+ * Globals
+ */
+
+ 
+ @font-face {
+  font-family: 'Boogaloo';
+  src: url('../fonts/boogaloo/boogaloo-regular-webfont.eot');
+  src: /*url('../fonts/boogaloo/boogaloo-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/boogaloo/boogaloo-regular-webfont.woff2') format('woff2'),
+       url('../fonts/boogaloo/boogaloo-regular-webfont.woff') format('woff'),*/
+       url('../css/font/Boogaloo-Regular.ttf') format('truetype');
+     /*  url('../fonts/boogaloo/boogaloo-regular-webfont.svg#rammetto_oneregular') format('svg');*/
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  /*height: 100%;*/
+  background: #1D693E url(../images/background.jpg) top center;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  /* Margin bottom by footer height */
+  margin-bottom: 90px;
+}
+body {
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.h1, h1 {
+  font-family: "Boogaloo",Arial,sans-serif;
+}
+.h2, h2 {
+  font-family: "Boogaloo",Arial,sans-serif;
+}
+
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+  overflow: hidden;
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+
+.alto-title
+{
+	min-height: 75px;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: left;
+    margin-bottom: 15px;
+  }
+
+  .cinta {
+    background: url(../images/bg-cinta.png) no-repeat top center;
+    background-position: 0 0;
+    width: 720px;
+    height: 79px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .cinta:hover {
+    background-position: 0 -90px;
+    color: #fff; 
+  }
+  .cinta h2 {
+    padding: 7px 0;
+  }
+  .bg-padres {
+    background: url(../images/bg-padres.png) no-repeat bottom center;
+    height: 256px;
+  }
+  .contenido-padres {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 256px;
+  }
+  .contenido-padres2 {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 79px;
+  }
+  .padres-cinta {
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+  .padres {
+    width: 100%;
+  }
+  .padres-cinta2 {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .contenido-area {
+    background: url(../images/Listos_Para_Aprender.png) top center;
+    max-width: 946px;
+    height: 226px;
+    margin: 0 auto;
+  }
+  .contenido-area .lead {
+    font-family: "Boogaloo",Arial,sans-serif;
+    text-shadow: none;
+    color: #585757;
+    font-size: 20px;
+    padding: 30px 35px 0px 35px;
+    margin-bottom: 0;
+  }
+  .contenido-area .lead3 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 32px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+    margin-top: 0px;
+    text-align: center;
+  }
+  .btn-fichas {
+    background: url(../images/Boton_Fichas.png) no-repeat center center;
+    background-size: 400px;
+    height: 60px;
+    width: 400px;
+    margin: 0 auto;
+    padding-left: 50px;
+  }
+  .btn-fichas p {
+    font-size: 18px;
+    padding-top: 15px;
+    text-shadow: none;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 767px) {
+  .masthead-nav {
+    float: left;
+    margin-bottom: 15px;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    /*vertical-align: middle;*/
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 750px;
+  }
+}
+
+
+.header {
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 1em 1em rgba(0,0,0,0.15);
+}
+.masthead-logo {
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+.masthead-logo2 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+/* CARD */
+.card {
+  margin-bottom: 2rem;
+}
+.card > img {
+  margin-bottom: .75rem;
+}
+.card > a > img {
+  margin-bottom: .75rem;
+}
+
+.card img {
+  border: 8px solid;
+  border-color: rgba(0, 0, 0, 0.2);
+  transition: border .3s ease;
+  -webkit-transition: border .3s ease;
+  -moz-transition: border .3s ease;
+  -o-transition: border .3s ease;
+}
+.card a > img:hover {
+  border-color: rgba(248, 165, 0, 0.8);
+}
+.card h4 {
+  height: 48px;
+}
+
+.menu-principal {
+  margin-bottom: 0px;
+}
+.control-buscador {
+  border: 1px solid #fff!important;
+  background-color: transparent!important;
+  color: #fff!important;
+}
+.control-buscador::-moz-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+.control-buscador:-ms-input-placeholder {
+  color: #fff;
+}
+.control-buscador::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.div-circle {
+  font-family: "Boogaloo",Arial,sans-serif;
+  border-radius: 50%;
+  width: 186px;
+  height: 177px;
+  margin: 0 auto;
+  background-color: #8A8C8E;
+  font-size: 60px;
+  padding: 34px 0;
+  color: #585757;
+  text-shadow: none;
+  font-weight: 500;
+  /*transition: border .3s ease;
+  -webkit-transition: border .3s ease;
+  -moz-transition: border .3s ease;
+  -o-transition: border .3s ease;*/
+
+
+  /**Font color transition**/
+  -webkit-transition-property:color, text;
+  -webkit-transition-duration: 0.5s, 0.5s;
+  -webkit-transition-timing-function: linear, ease-in;
+  -moz-transition-property:color, text;
+  -moz-transition-duration:0.5s;
+  -moz-transition-timing-function: linear, ease-in;
+  -o-transition-property:color, text;
+  -o-transition-duration:0.5s;
+  -o-transition-timing-function: linear, ease-in;
+}
+.div-circle:hover {
+  color: #999;
+}
+a > .div-circle {
+  text-decoration: none;
+}
+a:focus, a:hover {
+  /*color: #23527c;*/
+  text-decoration: none;
+}
+/* FONDO GRADOS */
+.bg-grado-1 {
+  background: url(../images/bg-grado-1.png) no-repeat top center;
+}
+.bg-grado-2 {
+  background: url(../images/bg-grado-2.png) no-repeat top center;
+}
+.bg-grado-3 {
+  background: url(../images/bg-grado-3.png) no-repeat top center;
+}
+.bg-grado-4 {
+  background: url(../images/bg-grado-4.png) no-repeat top center;
+}
+.bg-grado-5 {
+  background: url(../images/bg-grado-5.png) no-repeat top center;
+}
+.bg-grado-6 {
+  background: url(../images/bg-grado-6.png) no-repeat top center;
+}
+.pager {
+  padding-left: 0;
+  margin: 20px 0 0;
+  text-align: center;
+  list-style: none;
+}
+.pager li>a, .pager li>span {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #F8A500;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  font-size: 16px;
+}
+.pager li>a:focus, .pager li>a:hover {
+  text-decoration: none;
+  background-color: #d48f06;
+}
+.compartir {
+  padding: 10px 15px 13px;
+  font-size: 16px;
+}
+.compartir a:hover {
+  text-decoration: none;
+  color: rgba(255,255,255,.75);
+}
+
+.contenido-recurso {
+  border: 1px solid #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 90px;
+  border-top: 2px solid #fff;
+  padding-top: 15px;
+}
+.text-muted {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.7);
+}
+.footer a {
+  text-decoration: none;
+}
+.footer p {
+  margin-bottom: 6px;
+  line-height: 16px;
+}
+.icon-compartir {
+  font-size: 16px;
+}
+
+/* MODAL */
+.modal-content {
+  color: #333!important;
+  text-align: left;
+  text-shadow: none;
+}
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 100px auto;
+  }
+}
+.modal-header {
+  padding: 10px 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.close {
+  font-size: 36px;
+  line-height: 0;
+}
+button.close {
+  padding: 10px 0 0;
+}
+
+@media (min-width: 1200px) {
+  .contenido-principal {
+    background: url(../images/bg-principal.png) no-repeat center center!important;
+    height: 800px;
+  }
+  .enlace-inicial{
+    padding-top: 118px;
+    padding-left: 90px;
+    padding-right: 0;
+    color: #EBBD2F;
+    text-shadow: none;
+  }
+  .enlace-primaria{
+    padding-top: 168px;
+    padding-left: 28px;
+    color: #EBBD2F;
+    text-shadow: none;
+  }
+  .enlace-secundaria{
+    padding-top: 116px;
+    padding-right:30px;
+    color: #EBBD2F;
+    text-shadow: none;
+  }
+
+  .introduccion-ini {
+    background: url(../images/bg-texto3.png) top center no-repeat;
+    min-height: 538px;
+    padding: 120px 210px 15px 206px;
+  }
+  .introduccion-ini .lead {
+    font-size: 16px;
+    color: #000;
+    text-shadow: none;
+    font-weight: normal;
+  }
+
+				.introduccion-ini .lead1 {
+					font-family: "Boogaloo",Arial,sans-serif;
+					font-size: 28px;
+					color: #C83C3D;
+					text-shadow: none;
+					font-weight: normal;
+				  }
+				  .introduccion-ini .lead2 {
+					font-family: "Boogaloo",Arial,sans-serif;
+					font-size: 18px;
+					color: #585757;
+					text-shadow: none;
+					font-weight: normal;
+				  }
+				  .introduccion-ini .lead3 {
+					font-family: "Boogaloo",Arial,sans-serif;
+					font-size: 40px;
+					color: #4EA9D5;
+					text-shadow: none;
+					font-weight: normal;
+					margin-top: 30px;
+				  }
+
+
+  .introduccion-pri {
+    background: url(../images/bg-texto4.png) top center no-repeat;
+    min-height: 486px;
+    padding: 120px 210px 15px 206px;
+  }
+  .introduccion-pri .lead1 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 28px;
+    color: #C83C3D;
+    text-shadow: none;
+    font-weight: normal;
+  }
+  .introduccion-pri .lead2 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 18px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+  }
+  .introduccion-pri .lead3 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 40px;
+    color: #4EA9D5;
+    text-shadow: none;
+    font-weight: normal;
+    margin-top: 30px;
+  }
+
+
+
+
+
+  .introduccion-sec .lead {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 18px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+  
+  .introduccion-sec {
+    background: url(../images/bg-texto5.png) top center no-repeat;
+    min-height: 538px;
+    padding: 120px 210px 15px 206px;
+  }
+  .introduccion-sec .lead1 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 28px;
+    color: #C83C3D;
+    text-shadow: none;
+    font-weight: normal;
+  }
+  .introduccion-sec .lead2 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 18px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+  }
+  .introduccion-sec .lead3 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 40px;
+    color: #4EA9D5;
+    text-shadow: none;
+    font-weight: normal;
+    margin-top: 30px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .contenido-area {
+    background: url(../images/Listos_Para_Aprender.png) top center;
+    max-width: 946px;
+    height: 226px;
+    margin: 0 auto;
+  }
+  .contenido-area .lead {
+    font-family: "Boogaloo",Arial,sans-serif;
+    text-shadow: none;
+    color: #585757;
+    font-size: 20px;
+    padding: 30px 35px 20px 35px;
+    margin-bottom: 0;
+  }
+  .contenido-area .lead3 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 32px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+    margin-top: 0px;
+    text-align: center;
+  }
+  .col-md-20 {
+    float: left;
+  }
+  .col-md-20 {
+    width: 20%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .contenido-principal {
+    background: url(../images/bg-principal-1024.png) no-repeat center center!important;
+    height: 800px;
+  }
+  .container-inicio {
+    width: 1024px;
+    margin: 0 auto;
+  }
+  .enlace-primaria{
+    padding-top: 168px;
+    padding-left: 28px;
+    color: #EBBD2F;
+    text-shadow: none;
+  }
+  .enlace-inicial{
+    padding-top: 118px;
+    padding-left: 0px;
+    padding-right: 0;
+    color: #EBBD2F;
+    text-shadow: none;
+  }
+  .enlace-secundaria{
+    padding-top: 116px;
+    padding-right:0px;
+    color: #EBBD2F;
+    text-shadow: none;
+  }
+  
+  .col-md-20 {
+    float: left;
+  }
+  .col-md-20 {
+    width: 20%;
+  }
+  .introduccion-ini {
+    background: url(../images/bg-texto3.png) top center no-repeat;
+    min-height: 538px;
+    padding: 130px 130px 15px 120px!important;
+  }
+  .introduccion-ini .lead {
+    font-size: 16px;
+    color: #000;
+    text-shadow: none;
+    font-weight: normal;
+  }
+  .introduccion-ini .lead1 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 28px;
+    color: #C83C3D;
+    text-shadow: none;
+    font-weight: normal;
+    margin-bottom: 10px!important;
+  }
+  .introduccion-ini .lead2 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 18px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+  }
+  .introduccion-ini .lead3 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 40px!important;
+    color: #4EA9D5;
+    text-shadow: none;
+    font-weight: normal;
+    margin-top: 30px!important;
+  }
+  
+  
+  
+  
+  .introduccion-pri {
+    background: url(../images/bg-texto4.png) top center no-repeat;
+    min-height: 486px;
+    padding: 130px 130px 15px 120px!important;
+  }
+  .introduccion-pri .lead1 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 28px;
+    color: #C83C3D;
+    text-shadow: none;
+    font-weight: normal;
+    margin-bottom: 10px!important;
+  }
+  .introduccion-pri .lead2 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 18px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+  }
+  .introduccion-pri .lead3 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 40px!important;
+    color: #4EA9D5;
+    text-shadow: none;
+    font-weight: normal;
+    margin-top: 30px!important;
+  }
+
+
+
+
+
+  .introduccion-sec .lead {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 17px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+    margin-bottom: 20px!important;
+  }
+  .introduccion-sec {
+    background: url(../images/bg-texto5.png) top center no-repeat;
+    min-height: 538px;
+    padding: 130px 130px 15px 120px!important;
+  }
+  .introduccion-sec .lead1 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 28px;
+    color: #C83C3D;
+    text-shadow: none;
+    font-weight: normal;
+    margin-bottom: 10px!important;
+  }
+  .introduccion-sec .lead2 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 18px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+  }
+  .introduccion-sec .lead3 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 40px!important;
+    color: #4EA9D5;
+    text-shadow: none;
+    font-weight: normal;
+    margin-top: 30px!important;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  .contenido-area {
+    background: url(../images/Listos_Para_Aprender.png) top center;
+    max-width: 946px;
+    height: 226px;
+    margin: 0 auto;
+  }
+  .contenido-area .lead {
+    font-family: "Boogaloo",Arial,sans-serif;
+    text-shadow: none;
+    color: #585757;
+    font-size: 20px;
+    padding: 30px 35px 0px 35px;
+    margin-bottom: 0px;
+  }
+  .contenido-area .lead3 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 36px!important;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+    margin-top: 10px!important;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .contenido-principal {
+    background: url(../images/bg-principal-768.png) no-repeat center center;
+    height: 800px;
+  }
+  .enlace-inicial{
+    padding-top: 122px;
+    padding-left: 70px;
+    padding-right: 0;
+    color: #EBBD2F;
+    text-shadow: none;
+  }
+  .enlace-primaria {
+    padding-top: 157px;
+    padding-left: 12px;
+    color: #EBBD2F;
+    text-shadow: none;
+  }
+  .enlace-secundaria{
+    padding-top: 120px;
+    padding-right:64px;
+    color: #EBBD2F;
+    text-shadow: none;
+  }
+
+.introduccion-ini {
+    background: url(../images/bg-texto3-768.png) top center no-repeat;
+    min-height: 576px;
+    padding: 166px 90px 15px 85px;
+  }
+  .introduccion-ini .lead1 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 28px;
+    color: #C83C3D;
+    text-shadow: none;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+  .introduccion-ini .lead2 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 18px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+  }
+  .introduccion-ini .lead3 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 36px;
+    color: #4EA9D5;
+    text-shadow: none;
+    font-weight: normal;
+    margin-top: 20px;
+  }
+
+
+
+
+
+
+  .introduccion-pri {
+    background: url(../images/bg-texto4-768.png) top center no-repeat;
+    min-height: 486px;
+    min-height: 576px;
+    padding: 166px 90px 15px 85px;
+  }
+  .introduccion-pri .lead1 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 28px;
+    color: #C83C3D;
+    text-shadow: none;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+  .introduccion-pri .lead2 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 18px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+  }
+  .introduccion-pri .lead3 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 36px;
+    color: #4EA9D5;
+    text-shadow: none;
+    font-weight: normal;
+    margin-top: 20px;
+  }
+  
+  
+ 
+  .introduccion-sec .lead {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 17px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  .introduccion-sec {
+    background: url(../images/bg-texto5-768.png) top center no-repeat;
+    min-height: 486px;
+    min-height: 576px;
+    padding: 166px 90px 15px 85px;
+  }
+  .introduccion-sec .lead1 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 28px;
+    color: #C83C3D;
+    text-shadow: none;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+  .introduccion-sec .lead2 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 18px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+  }
+  .introduccion-sec .lead3 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 36px;
+    color: #4EA9D5;
+    text-shadow: none;
+    font-weight: normal;
+    margin-top: 20px;
+  }
+  
+  
+  
+  
+  
+  .cinta {
+    background: url(../images/bg-cinta.png) no-repeat top center;
+    background-position: 0 0;
+    width: 720px;
+    height: 79px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .cinta:hover {
+    background-position: 0 -90px;
+    color: #fff; 
+  }
+  .cinta h2 {
+    padding: 7px 0;
+  }
+  .bg-padres {
+    background: url(../images/bg-padres.png) no-repeat bottom center;
+    height: 256px;
+  }
+  .contenido-padres {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 256px;
+  }
+  .contenido-padres2 {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 79px;
+  }
+  .padres-cinta {
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+  .padres {
+    width: 100%;
+  }
+  .padres-cinta2 {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .contenido-area {
+    background: #fff;
+    height: auto;
+    padding: 22px 20px 15px 20px;
+    border-radius: 10px;
+    border: 5px solid #EBBD2F;
+  }
+  .contenido-area .lead {
+    font-family: "Boogaloo",Arial,sans-serif;
+    text-shadow: none;
+    color: #585757;
+    font-size: 20px;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  .contenido-area .lead3 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 32px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+    margin-top: 0px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+
+.introduccion-ini {
+    background: #fff;
+    min-height: 300px;
+    padding: 22px 20px 15px 20px;
+    border-radius: 10px;
+    border: 5px solid #EBBD2F;
+  }
+  .introduccion-ini .lead1 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 28px;
+    color: #C83C3D;
+    text-shadow: none;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+  .introduccion-ini .lead2 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 18px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+  }
+  .introduccion-ini .lead3 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 36px;
+    color: #4EA9D5;
+    text-shadow: none;
+    font-weight: normal;
+    margin-top: 20px;
+  }	
+	
+	
+  .introduccion-pri {
+    background: #fff;
+    min-height: 300px;
+    padding: 22px 20px 15px 20px;
+    border-radius: 10px;
+    border: 5px solid #EBBD2F;
+  }
+  .introduccion-pri .lead1 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 28px;
+    color: #C83C3D;
+    text-shadow: none;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+  .introduccion-pri .lead2 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 18px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+  }
+  .introduccion-pri .lead3 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 36px;
+    color: #4EA9D5;
+    text-shadow: none;
+    font-weight: normal;
+    margin-top: 20px;
+  }
+  
+  
+  .introduccion-sec {
+    background: #fff;
+    min-height: 300px;
+    padding: 22px 20px 15px 20px;
+    border-radius: 10px;
+    border: 5px solid #EBBD2F;
+  }
+  .introduccion-sec .lead1 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 28px;
+    color: #C83C3D;
+    text-shadow: none;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+  .introduccion-sec .lead2 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 18px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+  }
+  .introduccion-sec .lead3 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 36px;
+    color: #4EA9D5;
+    text-shadow: none;
+    font-weight: normal;
+    margin-top: 20px;
+  }
+  .introduccion-sec .lead {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 18px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  .cinta {
+    background: url(../images/bg-cinta.png) no-repeat top center;
+    background-position: none!important;
+    width: 100%!important;
+    height: 79px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .cinta:hover {
+    background-position: center -90px;
+    color: #fff; 
+  }
+  .cinta h2 {
+    padding: 9px 0;
+    font-size: 24px;
+  }
+  .bg-padres {
+    background: url(../images/bg-padres.png) no-repeat bottom center;
+    height: 256px;
+  }
+  .contenido-padres {
+    position: relative;
+    height: 79px;
+    margin-bottom: 50px;
+  }
+  .padres-cinta {
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+  .padres {
+    width: 100%;
+  }
+  .padres-cinta2 {
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
+  .contenido-area {
+    background: #fff;
+    height: auto;
+    padding: 22px 20px 15px 20px;
+    border-radius: 10px;
+    border: 5px solid #EBBD2F;
+  }
+  .contenido-area .lead {
+    font-family: "Boogaloo",Arial,sans-serif;
+    text-shadow: none;
+    color: #585757;
+    font-size: 18px;
+  }
+  .contenido-area .lead3 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 28px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 34px;
+  }
+
+  .introduccion-inicio {
+    background: #fff;
+    height: auto;
+    padding: 22px 20px 10px 20px;
+    border-radius: 10px;
+    border: 5px solid #EBBD2F;
+  }
+  .introduccion-inicio .lead {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 19px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+    margin-bottom: 15px;
+  }
+  .introduccion-inicio .lead2 {
+    font-family: "Boogaloo",Arial,sans-serif;
+    font-size: 22px;
+    color: #585757;
+    text-shadow: none;
+    font-weight: normal;
+    margin-bottom: 15px;
+  }
+  .espacio {
+    margin-bottom: 10px;
+  }
+  .btn-fichas {
+    background: #fab427;
+    height: auto;
+    max-width: 400px;
+    margin: 0 auto;
+    border: solid 2px #fff;
+    border-radius: 10px;
+  }
+  .btn-fichas p {
+    font-size: 18px;
+    padding-top: 8px;
+    padding-bottom: 2px;
+    text-shadow: none;
+    font-weight: 500;
+  }
+}
+
+.grados-sec {
+  margin-top: 30px;
+}
+
+
+
+
+@media (min-width: 1200px) {
+  .contenido-padres {
+    margin-top: 28px;
+  }
+}
+
+.bg-texto1 {
+  background: url(../images/bg-texto1.png) no-repeat;
+  width: 1037px;
+  height: 379px;
+  margin: 0 auto;
+  padding: 80px 45px 80px 30px;
+}
+.bg-texto1 p {
+  color: #333;
+  text-shadow: none;
+  font-size: 16px;
+}
+
+.bg-linea {
+  background: url(../images/bg-linea.png) no-repeat center center;
+  width: 100%
+}
+.bg-linea h2 {
+  font-size: 36px;
+}
+.bg-titulo1 {
+  background: url(../images/bg-titulo1.png) no-repeat center center;
+  height: 99px;
+  padding: 8px 0;
+}
+.bg-titulo1 h1 {
+  color: #F8A500;
+  text-shadow: none;
+  font-size: 42px;
+}
+
+.contenido-boton {
+  width: 280px;
+  margin: 20px auto;
+}
+.btn-ficha {
+  background: url(../images/btn-ficha.png) no-repeat center center;
+  background-position: 0 0;
+  background-size: 280px;
+  width: 280px;
+  height: 108px;
+  padding: 22px 20px 20px 130px;
+  margin: 0 auto;
+}
+.btn-ficha:hover {
+  background-position: 0 -108px;
+  color: #fff; 
+}
+.btn-ficha h3 {
+  font-size: 20px;
+  margin-top: 10px;
+  padding-right: 30px;
+}
+
+.contenido-investigar {
+  margin-bottom: 50px;
+}
+.contenido-investigar h2 {
+  margin-bottom: 20px;
+}
+.url-investigar {
+  font-size: 18px;
+  list-style: none;
+}
+.url-investigar {
+  text-decoration: underline;
+  padding-left: 0;
+}
+.url-investigar a:hover {
+  opacity: 0.7;
+}
+.vineta1 {
+  margin-right: 10px;
+  color: #f8a500;
+}
+.url-orientaciones {
+  list-style: none;
+  padding-left: 0;
+}
+.url-orientaciones a {
+  text-decoration: underline;
+}
+.url-orientaciones a:hover {
+  color: #f8a500;
+}
+.url-orientaciones li {
+  padding-bottom: 10px;
+}
+
+.contenido-grado {
+  margin-bottom: 50px;
+}
+
+
+
+.enlace-primaria a, .enlace-inicial a, .enlace-secundaria  a {
+  color: #EBBD2F;
+}
+.enlace-primaria a:hover, .enlace-inicial a:hover, .enlace-secundaria  a:hover {
+  color: #CC9805;
+}
+
+
+@media (min-width: 1200px) {
+  .container-inicio {
+    width: 1280px;
+    margin: 0 auto
+  }
+}
+
+.contenido-btn-padres {
+  margin-top: 50px;
+}
+
+.img-responsivo {
+  max-width: 100%;
+  height: auto;
+}
+
+.contenido-logo {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.contenido-nivel1, .contenido-nivel2, .contenido-nivel3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.contenido-nivel1 a, .contenido-nivel2 a, .contenido-nivel3  a {
+  color: #EBBD2F;
+  text-shadow: none;
+}
+.contenido-nivel1 a:hover, .contenido-nivel2 a:hover, .contenido-nivel3  a:hover {
+  color: #CC9805;
+}
+.contenido-nivel1 {
+  background: url(../images/inicial.png) top center;
+  background-size: 280px;
+  width: 280px;
+  height: 194px;
+  margin: 10px auto;
+  padding-top: 132px;
+}
+.contenido-nivel2 {
+  background: url(../images/primaria.png) top center;
+  background-size: 280px;
+  width: 280px;
+  height: 194px;
+  margin: 10px auto;
+  padding-top: 132px;
+}
+.contenido-nivel3 {
+  background: url(../images/secundaria.png) top center;
+  background-size: 280px;
+  width: 280px;
+  height: 194px;
+  margin: 10px auto;
+  padding-top: 132px;
+}
+
+.btn-descarga-doc {
+  /*background: url(../images/btn-cartilla-doc.png) top center;
+  background-position: 0 0;*/
+  width: 239px;
+  height: 209px;
+  margin: 0 auto;
+}
+.btn-descarga-doc:hover {
+  /*background-position: 0 -220px;*/
+}
+
+.texto-grado {
+  line-height: 50px;
+  margin-top: 15px;
+}
+.texto-grado2 {
+  font-size: 22px;
+  line-height: 0;
+}
+
+.btn-descarga-doc2 {
+  background: url(../images/btn-orientaciones-doc.png) top center;
+  background-position: 0 0;
+  width: 297px;
+  height: 56px;
+  margin: 0 auto;
+  display: block;
+}
+.btn-descarga-doc2:hover {
+  background-position: 0 -73px;
+}
+
+.btn-descarga-doc3 {
+  background: url(../images/btn-plan-curricular.png) top center;
+  background-position: 0 0;
+  width: 297px;
+  height: 56px;
+  margin: 0 auto;
+  display: block;
+  
+}
+.btn-descarga-doc3:hover {
+  background: url(../images/btn-plan-curricular-hover.png) top center;
+}
+
+
+.btn-descarga-doc4 {
+  background: url(../images/btn-guia-para-los-docentes.png) top center;
+  background-position: 0 0;
+  width: 297px;
+  height: 56px;
+  margin: 0 auto;
+  display: block;
+  
+}
+.btn-descarga-doc4:hover {
+  background: url(../images/btn-guia-para-los-docentes-hover.png) top center;
+}
+
+
+.btn-descarga-doc5 {
+  background: url(../images/btn-descargar-cuaderno-de-trabajo.png) top center;
+  background-position: 0 0;
+  width: 297px;
+  height: 56px;
+  margin: 0 auto;
+  display: block;
+  
+}
+.btn-descarga-doc5:hover {
+  background: url(../images/btn-descargar-cuaderno-de-trabajo-hover.png) top center;
+}
+
+
+.iframepdf {
+  z-index: 1!important;
+}
+
+form {
+  text-align: left!important;
+  text-shadow: none;
+  color: #333;
+}
+
+.pEvaluacion {
+  text-shadow: none !important;
+  color:black!important;
+}
