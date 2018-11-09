@@ -326,7 +326,7 @@
                 }
 
         $.ajax({          
-            url:   'acciones/actualizarEvaluacion.php',
+            url:   'json/evaluaciones/actualizarEvaluacion.php',
             data: {id: idPreg , accion: "iniciar", duracion : cboduracion},
             dataType: 'json',
             type:  'get',
@@ -357,7 +357,7 @@
         }
 
          $.ajax({          
-            url:   'acciones/actualizarEvaluacion.php',
+            url:   'json/evaluaciones/actualizarEvaluacion.php',
             data: {id: id , accion: "eliminar", duracion : '0'},
             dataType: 'json',
             type:  'get',
@@ -380,7 +380,7 @@
         }
 
          $.ajax({          
-            url:   'acciones/actualizarEvaluacion.php',
+            url:   'json/evaluaciones/actualizarEvaluacion.php',
             data: {id: id , accion: "finalizar", duracion : '0'},
             dataType: 'json',
             type:  'get',
@@ -657,7 +657,7 @@ var cadena = $.getJSON("json/materia.json", function (data) {
         
         //alert(preguntas);
         $.ajax({          
-            url:   'acciones/evaluacion.php',
+            url:   'json/evaluaciones/evaluacion.php',
             data: {nombre: nombre , grado: grado, curso: curso,preguntas: preguntas},
             dataType: 'json',
             type:  'get',
@@ -700,8 +700,8 @@ var cadena = $.getJSON("json/materia.json", function (data) {
                     nombreCache = ','+ localStorage.getItem('nombre');
                 }
 
-                 url  += "https://elcolecontigo.pe/acciones/evaluacion.php?nombre="+nombre+"&grado="+grado+"&curso="+curso+arrPreguntas
-                
+               //  url  += "https://elcolecontigo.pe/acciones/evaluacion.php?nombre="+nombre+"&grado="+grado+"&curso="+curso+arrPreguntas
+               url  += "https://jcr91.github.io/upc-pi3/json/evaluaciones/evaluacion.php?nombre="+nombre+"&grado="+grado+"&curso="+curso+arrPreguntas
                 localStorage.setItem('url', url + urlCache)
                 localStorage.setItem('nombre', nombre + nombreCache)
 
