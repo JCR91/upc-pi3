@@ -296,7 +296,7 @@
     $(document).ready(function () {
         
         listarExamenes('','','')
-        var grados = $.getJSON("json/grado.json", function (data) {
+        var grados = $.getJSON("http://54.94.193.55/minedu_pda_ie/json/grado.json", function (data) {
             $(".classGrado").html("");
                 $(".classGrado").append('<option value="">Seleccione</option>')
             $.each(data.grado, function(index, elemento) {               
@@ -326,7 +326,7 @@
                 }
 
         $.ajax({          
-            url:   'json/evaluaciones/actualizarEvaluacion.php',
+            url:   'http://54.94.193.55/minedu_pda_ie/json/evaluaciones/actualizarEvaluacion.php',
             data: {id: idPreg , accion: "iniciar", duracion : cboduracion},
             dataType: 'json',
             type:  'get',
@@ -357,7 +357,7 @@
         }
 
          $.ajax({          
-            url:   'json/evaluaciones/actualizarEvaluacion.php',
+            url:   'http://54.94.193.55/minedu_pda_ie/json/evaluaciones/actualizarEvaluacion.php',
             data: {id: id , accion: "eliminar", duracion : '0'},
             dataType: 'json',
             type:  'get',
@@ -380,7 +380,7 @@
         }
 
          $.ajax({          
-            url:   'json/evaluaciones/actualizarEvaluacion.php',
+            url:   'http://54.94.193.55/minedu_pda_ie/json/evaluaciones/actualizarEvaluacion.php',
             data: {id: id , accion: "finalizar", duracion : '0'},
             dataType: 'json',
             type:  'get',
@@ -413,7 +413,7 @@
         var id = $(this).attr("atributo")
         var strDiv = "";
         $("#divModalVer").html('')
-        var cadena = $.getJSON("json/evaluaciones/evaluacion.json", function (data) {
+        var cadena = $.getJSON("http://54.94.193.55/minedu_pda_ie/json/evaluaciones/evaluacion.json", function (data) {
             $.each(data.evaluacion, function(index, elemento) { 
                 if(elemento.id == id){
                     $("#tituloVer").text(elemento.nombre);
@@ -423,7 +423,7 @@
                             var idPregunta = val.idPregunta_1
                             console.log('idPregunta ->' + val.idPregunta_1)
 
-                            var cadenaPregunta = $.getJSON("json/evaluaciones/preguntas.json", function (dataP) {
+                            var cadenaPregunta = $.getJSON("http://54.94.193.55/minedu_pda_ie/json/evaluaciones/preguntas.json", function (dataP) {
                                 $.each(dataP.preguntas, function(indice, valor) { 
                                     if(valor.grado == elemento.grado ){
                                         $.each(valor.cursos, function(indice2, valor2) { 
@@ -476,7 +476,7 @@
     $(document).on('change', '#cbogradoRegistro' , function() {
 
         var grado = $(this).val();
-        var cadena = $.getJSON("json/materia.json", function (data) {
+        var cadena = $.getJSON("http://54.94.193.55/minedu_pda_ie/json/materia.json", function (data) {
             $("#cboCursoRegistro").html('')
             $("#cboCursoRegistro").append('<option value="">Seleccione</option>')
 
@@ -496,7 +496,7 @@
     $(document).on('change', '#cbogrado' , function() {
 
 var grado = $(this).val();
-var cadena = $.getJSON("json/materia.json", function (data) {
+var cadena = $.getJSON("http://54.94.193.55/minedu_pda_ie/json/materia.json", function (data) {
     $("#cbocurso").html('')
     $("#cbocurso").append('<option value="">Seleccione</option>')
 
@@ -564,7 +564,7 @@ var cadena = $.getJSON("json/materia.json", function (data) {
         $("#bancoPreguntas").html('')
         var strDiv = ""
 
-        var cadena = $.getJSON("json/evaluaciones/preguntas.json", function (data) {
+        var cadena = $.getJSON("http://54.94.193.55/minedu_pda_ie/json/evaluaciones/preguntas.json", function (data) {
 
             $.each(data.preguntas, function(index, elemento) {
                 if(elemento.grado == grado ){
@@ -657,7 +657,7 @@ var cadena = $.getJSON("json/materia.json", function (data) {
         
         //alert(preguntas);
         $.ajax({          
-            url:   'json/evaluaciones/evaluacion.php',
+            url:   'http://54.94.193.55/minedu_pda_ie/json/evaluaciones/evaluacion.php',
             data: {nombre: nombre , grado: grado, curso: curso,preguntas: preguntas},
             dataType: 'json',
             type:  'get',
@@ -701,7 +701,7 @@ var cadena = $.getJSON("json/materia.json", function (data) {
                 }
 
                //  url  += "https://elcolecontigo.pe/acciones/evaluacion.php?nombre="+nombre+"&grado="+grado+"&curso="+curso+arrPreguntas
-               url  += "https://jcr91.github.io/upc-pi3/json/evaluaciones/evaluacion.php?nombre="+nombre+"&grado="+grado+"&curso="+curso+arrPreguntas
+               url  += "http://54.94.193.55/minedu_pda_ie/json/evaluaciones/evaluacion.php?nombre="+nombre+"&grado="+grado+"&curso="+curso+arrPreguntas
                 localStorage.setItem('url', url + urlCache)
                 localStorage.setItem('nombre', nombre + nombreCache)
 
@@ -730,7 +730,7 @@ var cadena = $.getJSON("json/materia.json", function (data) {
         console.log('listarExamenes->0')
        try{
         console.log('listarExamenes->1')
-        var cadena = $.getJSON("json/evaluaciones/evaluacion.json", function (data) {
+        var cadena = $.getJSON("http://54.94.193.55/minedu_pda_ie/json/evaluaciones/evaluacion.json", function (data) {
             console.log('listarExamenes->2')
             $("#bodyEvaluacion").html('')
             $.each(data.evaluacion, function(key, elemento) {
