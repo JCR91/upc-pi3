@@ -10,7 +10,8 @@ define("PATH_PROY","C:/xampp/htdocs/minedu_pda_ie/");
     if($id == '' || $accion == ''  ){
         exit;
     }
-
+echo "$id: " . $id;
+exit;
     $current_data = file_get_contents('./evaluacion.json');  
     $array_data = json_decode($current_data, true);  
 
